@@ -1,0 +1,99 @@
+PITCHTEMPOPLAYER: AUDIO PLAYER/RECORDER THAT CAN CHANGE PITCH AND TEMPO WHILE PLAYING
+
+PitchTempoPlayer is an audio player and recorder that can change independently the picth and tempo of the file beeing played. It also supports JACK (jack-audio-connection-kit). It uses the Gstreamer1, and GTK3 libraries and is under GPL license. It is written for Ubuntu but should work for any other Linux distribution. 
+
+*******************
+|  INSTALLATION:  |
+*******************
+
+1. dependencies:
+""""""""""""""""
+FOR UBUNTU : All dependencies are available in the Ubuntu repositories.
+
+		- gcc, pkg-config, automake;
+		- libgtk-3-dev;
+		- libgstreamer1.0-dev;
+		- libjack-jackd2-dev for jack2 (or libjack-dev for jack1); 
+
+		- gstreamer1.0-plugins-base and gstreamer0.10-plugins-good at least for GSTREAMER1.0; plugins-bad and ugly may be necessary (for reading files such as mp3);
+
+FOR OTHER DISTRIBUTIONS : 
+	For the other distributions, the dependencies should be very similar. 
+
+2. compilation and installation : 
+"""""""""""""""""""""""""""""""""
+ 	1) in a terminal, go to the directory where the sources are; for example, if the source package is in the HOME directory :
+
+		cd ~/pitchtempoplayer-<your_version> (if the sources are in your 'home' directory);
+
+	2) type : 
+
+		./configure 
+
+
+	If you want PitchTempoPlayer to be installed in another directory than the default one ('/usr/local/bin'), you can add it at 'configure' or 'make' step according to the 'Autotools' standards. For example : 
+
+		./configure --prefix=/usr
+
+will install the executable file in '/usr/bin' directory instead of '/usr/local/bin'. 
+
+	3) type :
+
+		make
+
+	4) type : 
+
+		sudo make install (the password will be necessary for this)
+
+	5) to completely remove PitchTempoPlayer, type :
+
+		sudo make uninstall
+
+
+*********
+|  USE  |
+*********
+
+Run it from a terminal by typing : 
+
+	ptplayer
+
+or from the 'Menu->Applications->Sound & Video->PitchTempoPlayer'
+
+Manage playlist : 
+-----------------
+Files can be added by the file selection dialog or by drag-and-drop(dnd); multiple selection is possible. The playlist can be reordered by dnd, including multiple dnd. Keyboard/mouse shortcuts exist to manage playlist (see later) and playing.
+
+Playback mode :
+---------------
+Basic functions:
+You can play the audio file, pause or stop playing, seek forward or backward (5 seconds by 5 seconds). Volume and balance (right-left output) can be adjusted.
+
+Change pitch and tempo:
+You can adjust the tempo of playing independendtly of the pitch ('tempo' parameter), the pitch independently of the tempo ('pitch' parameter) or both at the same time ('rate' parameter). Those parameters (pitch, tempo and rate) can be changed 'on the fly', i.e. while a file is beeing played. You can save the selected file with the current 'pitch', 'tempo' and 'rate' parameters : the file will be encoded as a '.flac' file and saved in the directory you have chosen.
+
+Effects :
+The effects window is open with the 'equaliser' button; the available effects are : a 10 bands equaliser and a displayed spectrogram.
+
+Record mode:
+------------
+The record mode is activated when you check the 'Activate Rec' check box. When 'Activate Rec' is checked:  the recording level is monitored and displayed on a vu-meter; a recording is started with the 'Record' button, can be paused with the same button, and can played with the 'Play' button. The recording can be saved with the 'Save as...' button : the file will be encoded as a '.flac' file and saved in the directory you have chosen.
+
+Use with Jack (Jack-Audio-Connection-Kit):
+When the 'Use Jack' check box is checked, PitchTempoPlayer can be a jack client. Both playing or recording from jack is possible.
+
+
+KEYBINDINGS :
+"""""""""""""
+'Space bar' : play/pause;
+'left/right arrow' : seek backward/forward;
+'Escape' key : stop playing;
+'Return' key or double-click on a file from the playlist: stops current playing and starts playing the selected file;
+'Delete' key : delete the selected file(s) from the playlist;
+
+Thank you for your suggestions/remarks and than you for your presence!
+
+Victor 
+nadaeck (at) hotmail (dot) com	
+
+

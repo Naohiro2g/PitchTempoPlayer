@@ -1,0 +1,31 @@
+2016-01-08 Bernard Victor Delvaux  <nadaeck@hotmail.com>
+    Version : PTPlayer-1.2.0 : 
+	* events.c : new keybindings (play/pause and seek forward/backward);
+	* general changes : icons have been renamed to make them specific for this app;
+
+2016-11-15 Bernard Victor Delvaux  <nadaeck@hotmail.com>
+    Version : PTPlayer-1.1.0 : 
+	* gstreamer.c : PTPlayer works now with Gstreamer1.0;
+
+2013-02-26  Bernard Victor Delvaux  <nadaeck@hotmail.com>
+    Version : PTPlayer-1.0.3 : 
+	* configure.ac : gtk2 entries have been removed since new version is for gtk3 only;
+	* main.c : icon added to the main window;
+	* main.c : 'fill' and 'expand' property of the playlist has been changed;
+
+2013-02-18  Bernard Victor Delvaux  <nadaeck@hotmail.com>
+    Version : PTPlayer-1.0.2 : 
+	* general changes : deprecated function have been updates in gtk3;
+	* general changes : new icon;
+	* gstreamer.c : 'autoaudiosrc' has been changed for 'alsasrc' since the first seems not to work anymore;
+
+2012-08-03  Bernard Victor Delvaux  <nadaeck@hotmail.com>
+    Version : PTPlayer-1.0.0 : 
+	* general changes : PTPlayer ported to GTK3.
+	* general changes : some warnings have been added regarding jack use.
+
+2011-10-27  Bernard Victor Delvaux  <nadaeck@hotmail.com>
+    Version : PTPlayer-0.0.1 : 
+	First version of the software.
+
+

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=PitchTempoPlayer
+GenericName=PitchTempoPlayer
+Comment=Plays and records audio, and change pitch and/or tempo on the fly
+Exec=ptplayer pitchtempoplayer
+Icon=ptplayer
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;AudioVideo;
+Type=Application
+StartupNotify=true
+
